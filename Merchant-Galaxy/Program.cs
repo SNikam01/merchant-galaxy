@@ -10,8 +10,7 @@ namespace Merchant_Galaxy {
             Console.WriteLine("--- ROMAN TO DECIMAL CONVERTER --- ");
             Console.WriteLine();
 
-            string path =  System.IO.Path.GetDirectoryName(
-            System.Reflection.Assembly.GetEntryAssembly().Location);
+            string path = AppDomain.CurrentDomain.BaseDirectory+ "input.txt";
 
             // Open the file to read from.
             string readText = File.ReadAllText(path);
