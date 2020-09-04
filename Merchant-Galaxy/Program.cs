@@ -10,16 +10,11 @@ namespace Merchant_Galaxy {
             Console.WriteLine("--- ROMAN TO DECIMAL CONVERTER --- ");
             Console.WriteLine();
 
-            //if (args == null || args.Length == 0)
-            //{
-            //        Console.WriteLine("Please specify a filename as a parameter.");
-            //        return;
-            //}
-
-            //string path = args[0];
+            string path =  System.IO.Path.GetDirectoryName(
+            System.Reflection.Assembly.GetEntryAssembly().Location);
 
             // Open the file to read from.
-            string readText = File.ReadAllText(@"G:\Programs\Tavisca\Week-1\SOLID Principles & Design Pattern\merchant-galaxy (Siddharth Panwar)\merchants-guide-to-the-galaxy\MerchantApp\input.txt");
+            string readText = File.ReadAllText(path);
             string[] lines = readText.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             Console.WriteLine("--- Input Start ---");
             Console.WriteLine(readText);
